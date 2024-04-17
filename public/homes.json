@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Luxury Villa with Ocean View",
+    "segment_name": "Luxury Homes",
+    "description": "Stunning villa overlooking the ocean, featuring spacious living areas, modern kitchen, and private pool.",
+    "price": "$2,500,000",
+    "status": "sale",
+    "area": "4,500 sq ft",
+    "location": "Malibu, California",
+    "facilities": ["living room", "swimming pool", "kitchen"],
+    "image": "https://i.ibb.co/YDC0tX2/residensial-house-1.jpg"
+  },
+  {
+    "id": 2,
+    "estate_title": "Cozy Apartment in Downtown",
+    "segment_name": "City Apartments",
+    "description": "Charming apartment in the heart of downtown, with easy access to shops, restaurants, and public transportation.",
+    "price": "$1,200/month",
+    "status": "rent",
+    "area": "800 sq ft",
+    "location": "New York City, New York",
+    "facilities": ["living room", "kitchen", "balcony"],
+    "image": "https://i.ibb.co/Kj1rc1z/residensial-house-2.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "Family Home in Suburban Paradise",
+    "segment_name": "Family Homes",
+    "description": "Spacious family home nestled in a quiet suburban neighborhood, featuring a large backyard and modern amenities.",
+    "price": "$450,000",
+    "status": "sale",
+    "area": "2,200 sq ft",
+    "location": "Boulder, Colorado",
+    "facilities": ["living room", "backyard", "garage"],
+    "image": "https://i.ibb.co/6122nZb/residensial-house-3.jpg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Penthouse with Panoramic Views",
+    "segment_name": "Luxury Homes",
+    "description": "Exquisite penthouse offering breathtaking panoramic views of the city skyline, with luxurious amenities and spacious interiors.",
+    "price": "$4,000,000",
+    "status": "sale",
+    "area": "6,000 sq ft",
+    "location": "Miami, Florida",
+    "facilities": ["living room", "swimming pool", "gym"],
+    "image": "https://i.ibb.co/mvbdpqP/residensial-house-4.jpg"
+  },
+  {
+    "id": 5,
+    "estate_title": "Modern Townhouse with Rooftop Terrace",
+    "segment_name": "Townhouses",
+    "description": "Sleek and stylish townhouse featuring a rooftop terrace, perfect for entertaining, in a vibrant urban neighborhood.",
+    "price": "$750,000",
+    "status": "sale",
+    "area": "1,800 sq ft",
+    "location": "San Francisco, California",
+    "facilities": ["living room", "rooftop terrace", "garage"],
+    "image": "https://i.ibb.co/gvpjQ8d/residensial-house-5.jpg"
+  },
+  {
+    "id": 6,
+    "estate_title": "Quaint Cottage by the Lake",
+    "segment_name": "Cottages",
+    "description": "Charming cottage nestled by a serene lake, offering a peaceful retreat with rustic charm and scenic views.",
+    "price": "$300,000",
+    "status": "sale",
+    "area": "1,200 sq ft",
+    "location": "Lake Tahoe, California",
+    "facilities": ["living room", "fireplace", "deck"],
+    "image": "https://i.ibb.co/gDDWZM5/residensial-house-6.jpg"
+  },
+  {
+    "id": 7,
+    "estate_title": "Spacious Condo with City Views",
+    "segment_name": "City Condos",
+    "description": "Bright and airy condo with stunning city views, located in a bustling urban area with access to amenities and entertainment.",
+    "price": "$900,000",
+    "status": "sale",
+    "area": "1,500 sq ft",
+    "location": "Chicago, Illinois",
+    "facilities": ["living room", "balcony", "gym"],
+    "image": "https://i.ibb.co/Fb2SYhp/residensial-house-7.jpg"
+  },
+  {
+    "id": 8,
+    "estate_title": "Elegant Mansion in Exclusive Neighborhood",
+    "segment_name": "Luxury Homes",
+    "description": "Magnificent mansion situated in an exclusive neighborhood, boasting grandeur, luxury, and unparalleled elegance.",
+    "price": "$7,500,000",
+    "status": "sale",
+    "area": "10,000 sq ft",
+    "location": "Bel Air, California",
+    "facilities": ["living room", "swimming pool", "home theater"],
+    "image": "https://i.ibb.co/Wc1nhmN/residensial-house-8.jpg"
+  },
+  {
+    "id": 9,
+    "estate_title": "Sunny Duplex with Private Garden",
+    "segment_name": "Duplexes",
+    "description": "Bright and sunny duplex with a private garden oasis, offering a perfect blend of indoor and outdoor living spaces.",
+    "price": "$600,000",
+    "status": "sale",
+    "area": "2,400 sq ft",
+    "location": "Seattle, Washington",
+    "facilities": ["living room", "private garden", "garage"],
+    "image": "https://i.ibb.co/M7SPNMM/residensial-house-9.jpg"
+  },
+  {
+    "id": 10,
+    "estate_title": "Riverside Retreat with Dock",
+    "segment_name": "Waterfront Properties",
+    "description": "Tranquil riverside retreat with a private dock, ideal for boating and relaxation, surrounded by nature's beauty.",
+    "price": "$850,000",
+    "status": "sale",
+    "area": "2,800 sq ft",
+    "location": "Portland, Oregon",
+    "facilities": ["living room", "private dock", "fire pit"],
+    "image": "https://i.ibb.co/bshzpHn/residensial-house-10-jpg.jpg"
+  }
+]
