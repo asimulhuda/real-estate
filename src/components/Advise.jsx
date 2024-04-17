@@ -1,4 +1,6 @@
 import { Button } from "@material-tailwind/react";
+import { FaRegEye, FaRegSmile } from "react-icons/fa";
+import { IoWalletOutline } from "react-icons/io5";
 import { MdOutlineManageSearch } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -14,7 +16,7 @@ const Advise = () => {
           industry.
         </p>
         <Button size="lg">
-          <Link to="/properties">Get Started</Link>
+          <Link to="/contact">Get Started</Link>
         </Button>
       </div>
       <div className="lg:w-[600px] space-y-6">
@@ -27,26 +29,28 @@ const Advise = () => {
             </h4>
           </div>
           <div className="px-6 py-7 w-full rounded-[20px] bg-[#FBEEE6] space-y-4">
-            <MdOutlineManageSearch className="text-4xl text-[#FD6810]" />
+            <FaRegEye className="text-4xl text-[#FD6810]" />
             <h4 className="text-[28px] font-bold">
-              Search <br />
-              your location
+              Visit <br />
+              Appointment
             </h4>
           </div>
         </div>
         <div className="flex gap-6">
           <div className="px-6 py-7 w-full rounded-[20px] bg-[#FBEEE6] space-y-4">
-            <MdOutlineManageSearch className="text-4xl text-[#FD6810]" />
+            <FaRegSmile className="text-4xl text-[#FD6810]" />
             <h4 className="text-[28px] font-bold">
-              Search <br />
-              your location
+              Get your
+              <br />
+              dream house
             </h4>
           </div>
           <div className="px-6 py-7 w-full rounded-[20px] bg-[#FBEEE6] space-y-4">
-            <MdOutlineManageSearch className="text-4xl text-[#FD6810]" />
+            <IoWalletOutline className="text-4xl text-[#FD6810]" />
             <h4 className="text-[28px] font-bold">
-              Search <br />
-              your location
+              Enjoy your
+              <br />
+              Appointment
             </h4>
           </div>
         </div>

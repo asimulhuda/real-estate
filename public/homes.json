@@ -106,17 +106,5 @@
     "location": "Seattle, Washington",
     "facilities": ["living room", "private garden", "garage"],
     "image": "https://i.ibb.co/M7SPNMM/residensial-house-9.jpg"
-  },
-  {
-    "id": 10,
-    "estate_title": "Riverside Retreat with Dock",
-    "segment_name": "Waterfront Properties",
-    "description": "Tranquil riverside retreat with a private dock, ideal for boating and relaxation, surrounded by nature's beauty.",
-    "price": "$850,000",
-    "status": "sale",
-    "area": "2,800 sq ft",
-    "location": "Portland, Oregon",
-    "facilities": ["living room", "private dock", "fire pit"],
-    "image": "https://i.ibb.co/bshzpHn/residensial-house-10-jpg.jpg"
   }
 ]

@@ -1,7 +1,11 @@
+import AboutHero from "../../components/AboutHero";
+import AboutVision from "../../components/AboutVision";
+
 const About = () => {
   return (
     <div>
-      <h1>About</h1>
+      <AboutHero></AboutHero>
+      <AboutVision></AboutVision>
     </div>
   );
 };

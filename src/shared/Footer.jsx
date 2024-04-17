@@ -20,7 +20,7 @@ const Footer = () => {
 
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="relative max-w-[1200px] mx-auto py-40">
+    <footer className="relative lg:max-w-[1200px] lg:mx-auto mx-5 lg:py-32 py-10">
       <div className="mx-auto w-full max-w-7xl ">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <Link to="/" variant="h5" className="mb-6">

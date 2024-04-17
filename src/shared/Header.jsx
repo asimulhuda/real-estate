@@ -73,20 +73,20 @@ const Header = () => {
           </Link>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
-            <div className="flex items-center gap-x-1">
+            <div className="flex items-center gap-x-2">
               <Button
-                variant="text"
+                variant="outlined"
                 size="lg"
                 className="hidden lg:inline-block"
               >
-                <span>Log In</span>
+                <Link to="/register">Register</Link>
               </Button>
               <Button
                 variant="gradient"
                 size="lg"
                 className="hidden lg:inline-block"
               >
-                <span>Sign in</span>
+                <span>Login</span>
               </Button>
             </div>
             <IconButton
@@ -132,10 +132,10 @@ const Header = () => {
           {navList}
           <div className="flex items-center gap-x-1">
             <Button fullWidth variant="text" size="sm" className="">
-              <span>Log In</span>
+              <Link to="register">Register</Link>
             </Button>
             <Button fullWidth variant="gradient" size="sm" className="">
-              <span>Sign in</span>
+              <span>Login</span>
             </Button>
           </div>
         </MobileNav>
