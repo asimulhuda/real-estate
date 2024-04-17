@@ -7,12 +7,11 @@ const Error = () => {
     <div className="h-[100vh] bg-[#FFF9F6] flex flex-col justify-center items-center space-y-6">
       <img src={errorImage} alt="" />
       <p className="text-[28px] font-bold">Something wrong!</p>
-      <Button variant="outlined">
-        <Link className="flex items-center gap-2 text-lg" to="/">
-          {" "}
+      <Link to="/">
+        <Button className="flex items-center gap-2 text-lg" variant="outlined">
           Homepage <FaChevronRight />
-        </Link>
-      </Button>
+        </Button>
+      </Link>
     </div>
   );
 };

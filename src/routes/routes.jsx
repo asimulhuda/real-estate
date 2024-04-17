@@ -5,6 +5,9 @@ import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
 import Error from "../shared/Error";
 import Register from "../pages/Register/Register";
+import Login from "../pages/Login/Login";
+import Property from "../pages/Property/Property";
+import PropertyDetails from "../pages/PropertyDetails/PropertyDetails";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +21,11 @@ const router = createBrowserRouter([
         loader: () => fetch("/homes.json"),
       },
       {
+        path: "/properties/:id",
+        element: <PropertyDetails></PropertyDetails>,
+        loader: () => fetch("/homes.json"),
+      },
+      {
         path: "/about",
         element: <About></About>,
       },
@@ -26,8 +34,17 @@ const router = createBrowserRouter([
         element: <Contact></Contact>,
       },
       {
+        path: "/properties",
+        element: <Property></Property>,
+        loader: () => fetch("/homes.json"),
+      },
+      {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
     ],
   },

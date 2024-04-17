@@ -4,10 +4,19 @@ import { IoMdResize } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineSegment } from "react-icons/md";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const SingleCard = ({ propertyData }) => {
-  const { segment_name, estate_title, price, image, area, status, location } =
-    propertyData;
+  const {
+    segment_name,
+    estate_title,
+    price,
+    image,
+    area,
+    status,
+    location,
+    id,
+  } = propertyData;
   return (
     <div className="bg-[#FFF9F6] rounded-xl border border-[#ECD6C8]">
       <img
@@ -39,8 +48,10 @@ const SingleCard = ({ propertyData }) => {
             </h4>
           </div>
         </div>
-        <div className="flex justify-between">
-          <Button size="lg">View Details</Button>
+        <div className="flex justify-between items-center">
+          <Link to={`/properties/${id}`}>
+            <Button size="lg">View Details</Button>
+          </Link>
           <h5 className="text-2xl font-semibold">{price}</h5>
         </div>
       </div>

@@ -65,7 +65,7 @@ const Header = () => {
   );
 
   return (
-    <div className="max-w-[1200px] mx-auto">
+    <div className="max-w-[1200px] mx-auto sticky top-0">
       <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-0 lg:py-4 shadow-none">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Link to="/">
@@ -74,20 +74,25 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-2">
-              <Button
-                variant="outlined"
-                size="lg"
-                className="hidden lg:inline-block"
-              >
-                <Link to="/register">Register</Link>
-              </Button>
-              <Button
-                variant="gradient"
-                size="lg"
-                className="hidden lg:inline-block"
-              >
-                <span>Login</span>
-              </Button>
+              <Link to="/register">
+                <Button
+                  variant="outlined"
+                  size="lg"
+                  className="hidden lg:inline-block"
+                >
+                  Register
+                </Button>
+              </Link>
+
+              <Link to="/login">
+                <Button
+                  variant="gradient"
+                  size="lg"
+                  className="hidden lg:inline-block"
+                >
+                  Login
+                </Button>
+              </Link>
             </div>
             <IconButton
               variant="text"
@@ -131,12 +136,16 @@ const Header = () => {
         <MobileNav open={openNav}>
           {navList}
           <div className="flex items-center gap-x-1">
-            <Button fullWidth variant="text" size="sm" className="">
-              <Link to="register">Register</Link>
-            </Button>
-            <Button fullWidth variant="gradient" size="sm" className="">
-              <span>Login</span>
-            </Button>
+            <Link to="register">
+              <Button fullWidth variant="text" size="sm" className="">
+                Register
+              </Button>
+            </Link>
+            <Link to="/login">
+              <Button fullWidth variant="gradient" size="sm" className="">
+                Login
+              </Button>
+            </Link>
           </div>
         </MobileNav>
       </Navbar>
