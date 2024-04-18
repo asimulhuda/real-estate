@@ -32,10 +32,14 @@ const AboutHero = () => {
   return (
     <div className="lg:max-w-[1200px] lg:mx-auto mx-5 py-14">
       <div className=" text-center lg:w-[800px] mx-auto space-y-6">
-        <h1 className="lg:text-5xl text-3xl font-bold ">
+        <h1
+          className="lg:text-5xl text-3xl font-bold "
+          data-aos="zoom-in-down"
+          data-aos-duration="2000"
+        >
           Reimagining real estate to make it easier to unlock.
         </h1>
-        <p className="">
+        <p className="" data-aos="fade-up" data-aos-duration="2000">
           On the other hand, we denounce with righteous indignation and dislike
           men who are so beguiled and demoralized by the charms of pleasure of
           the moment, so blinded by desire, that they cannot foresee the pain
@@ -46,6 +50,8 @@ const AboutHero = () => {
         {aboutHero.map(({ imageLink }, index) => (
           <div key={index}>
             <img
+              data-aos="fade-right"
+              data-aos-duration="2000"
               className="h-40 w-full max-w-full rounded-lg object-cover object-center"
               src={imageLink}
               alt="gallery-photo"

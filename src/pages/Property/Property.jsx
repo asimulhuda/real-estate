@@ -1,11 +1,14 @@
-import { FaArrowRight } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 import SingleCard from "../../components/SingleCard";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 const Property = () => {
   const singleCardData = useLoaderData();
   return (
     <div className="lg:max-w-[1200px] lg:mx-auto mx-5 py-14 space-y-10">
+      <Helmet>
+        <title>Nestify Realty | Property</title>
+      </Helmet>
       <div className="">
         <h2 className="text-4xl font-semibold">All Properties</h2>
       </div>

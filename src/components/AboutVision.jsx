@@ -4,10 +4,14 @@ const AboutVision = () => {
   return (
     <div className="bg-[#FFF9F5]">
       <div className="lg:max-w-[1200px] lg:mx-auto mx-5 py-14 flex lg:flex-row flex-col items-center gap-12">
-        <div className="">
+        <div data-aos="fade-right" data-aos-duration="2000">
           <img src={visionImage} alt="" className="lg:w-[2000px] w-full" />
         </div>
-        <div className="space-y-6">
+        <div
+          className="space-y-6"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+        >
           <h1 className="lg:text-5xl text-3xl font-bold ">
             Our vision is simple.
           </h1>

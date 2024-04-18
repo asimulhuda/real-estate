@@ -1,10 +1,18 @@
 import { Button, Input, Textarea } from "@material-tailwind/react";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   return (
     <div className="py-20 bg-[#FFF7F0]">
+      <Helmet>
+        <title>Nestify Realty | Contact</title>
+      </Helmet>
       <div className="lg:max-w-[1200px] lg:mx-auto mx-5 flex lg:flex-row flex-col-reverse lg:px-12 px-6 py-16 bg-white items-center">
-        <form className="space-y-4 lg:mt-0 mt-10 pr-10 lg:border-r-2 lg:w-[550px] w-full">
+        <form
+          className="space-y-4 lg:mt-0 mt-10 pr-10 lg:border-r-2 lg:w-[550px] w-full"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+        >
           <Input type="password" size="lg" label="Full Name" required />
           <Input type="email" size="lg" label="Email Address" required />
           <Input type="number" size="lg" label="Phone Number" required />
@@ -13,7 +21,11 @@ const Contact = () => {
             Send Request
           </Button>
         </form>
-        <div className="py-6 md:py-0 md:px-6">
+        <div
+          className="py-6 md:py-0 md:px-6"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <h1 className="text-4xl font-bold">Get in touch</h1>
           <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
           <div className="space-y-4">

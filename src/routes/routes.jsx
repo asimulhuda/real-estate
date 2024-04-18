@@ -8,6 +8,7 @@ import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import Property from "../pages/Property/Property";
 import PropertyDetails from "../pages/PropertyDetails/PropertyDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/properties/:id",
-        element: <PropertyDetails></PropertyDetails>,
+        element: (
+          <PrivateRoute>
+            <PropertyDetails></PropertyDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/homes.json"),
       },
       {
@@ -35,7 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/properties",
-        element: <Property></Property>,
+        element: (
+          <PrivateRoute>
+            <Property></Property>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/homes.json"),
       },
       {

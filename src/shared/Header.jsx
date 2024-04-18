@@ -1,16 +1,24 @@
 import {
+  Avatar,
   Button,
   IconButton,
   MobileNav,
   Navbar,
   Typography,
 } from "@material-tailwind/react";
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logoImage from "../../public/logo.png";
+import { AuthContext } from "../provider/AuthProvider";
+import userImage from "../assets/user.png";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
   const [openNav, setOpenNav] = React.useState(false);
+
+  const handleLogOut = () => {
+    logOut().then().catch();
+  };
 
   React.useEffect(() => {
     window.addEventListener(
@@ -31,16 +39,18 @@ const Header = () => {
           Home
         </NavLink>
       </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-semibold text-base"
-      >
-        <NavLink to="/properties" className="flex items-center">
-          Properties
-        </NavLink>
-      </Typography>
+      {user && (
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className="p-1 font-semibold text-base"
+        >
+          <NavLink to="/properties" className="flex items-center">
+            Properties
+          </NavLink>
+        </Typography>
+      )}
       <Typography
         as="li"
         variant="small"
@@ -74,25 +84,46 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-2">
-              <Link to="/register">
-                <Button
-                  variant="outlined"
-                  size="lg"
-                  className="hidden lg:inline-block"
-                >
-                  Register
-                </Button>
-              </Link>
+              {user ? (
+                <>
+                  <Avatar
+                    variant="circular"
+                    size="md"
+                    className="border border-gray-900 p-0.5 cursor-pointer"
+                    src={user.photoURL ? user.photoURL : userImage}
+                  />
+                  <Button
+                    onClick={handleLogOut}
+                    variant="gradient"
+                    size="lg"
+                    className="hidden lg:inline-block"
+                  >
+                    LogOut
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Link to="/register">
+                    <Button
+                      variant="outlined"
+                      size="lg"
+                      className="hidden lg:inline-block"
+                    >
+                      Register
+                    </Button>
+                  </Link>
 
-              <Link to="/login">
-                <Button
-                  variant="gradient"
-                  size="lg"
-                  className="hidden lg:inline-block"
-                >
-                  Login
-                </Button>
-              </Link>
+                  <Link to="/login">
+                    <Button
+                      variant="gradient"
+                      size="lg"
+                      className="hidden lg:inline-block"
+                    >
+                      Login
+                    </Button>
+                  </Link>
+                </>
+              )}
             </div>
             <IconButton
               variant="text"
@@ -135,17 +166,31 @@ const Header = () => {
         </div>
         <MobileNav open={openNav}>
           {navList}
-          <div className="flex items-center gap-x-1">
-            <Link to="register">
-              <Button fullWidth variant="text" size="sm" className="">
-                Register
+          <div className="flex items-center gap-x-2">
+            {user ? (
+              <Button
+                onClick={handleLogOut}
+                fullWidth
+                variant="gradient"
+                size="md"
+                className=""
+              >
+                LogOut
               </Button>
-            </Link>
-            <Link to="/login">
-              <Button fullWidth variant="gradient" size="sm" className="">
-                Login
-              </Button>
-            </Link>
+            ) : (
+              <>
+                <Link to="register" className="w-full">
+                  <Button fullWidth variant="outlined" size="md" className="">
+                    Register
+                  </Button>
+                </Link>
+                <Link to="/login" className="w-full">
+                  <Button fullWidth variant="gradient" size="md" className="">
+                    Login
+                  </Button>
+                </Link>
+              </>
+            )}
           </div>
         </MobileNav>
       </Navbar>

@@ -1,12 +1,19 @@
 import { Button, Input } from "@material-tailwind/react";
-import heroImage from "../assets/heroImage.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const Hero = () => {
   return (
     <div className="bg-[#FFF7F0]">
-      <div className="lg:max-w-[1200px] lg:mx-auto mx-5 py-14 lg:flex flex-row gap-14 items-center">
-        <div className="space-y-4">
-          <h1 className="text-5xl font-bold leading-[140%]">
+      <div className="lg:max-w-[1200px] lg:mx-auto mx-5 py-14 lg:flex flex-row gap-14 items-center space-y-10">
+        <div
+          className="space-y-4"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+        >
+          <h1 className="lg:text-5xl text-3xl font-bold lg:leading-[140%]">
             Find a perfect property Where you will love to live
           </h1>
           <p className="text-xl font-normal">
@@ -25,8 +32,42 @@ const Hero = () => {
             </form>
           </div>
         </div>
-        <div className="w-[90%]">
-          <img src={heroImage} alt="" />
+        <div
+          className="lg:w-[50%]"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+        >
+          <Swiper
+            pagination={{
+              dynamicBullets: true,
+            }}
+            modules={[Pagination, Autoplay]}
+            loop={true}
+            autoplay={{ delay: 2000 }}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img
+                className="lg:h-[520px] h-[400px] rounded-3xl"
+                src="https://i.ibb.co/gDDWZM5/residensial-house-6.jpg"
+                alt=""
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="lg:h-[520px] h-[400px] rounded-3xl"
+                src="https://i.ibb.co/Kj1rc1z/residensial-house-2.jpg"
+                alt=""
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="lg:h-[520px] h-[400px] rounded-3xl"
+                src="https://i.ibb.co/Wc1nhmN/residensial-house-8.jpg"
+                alt=""
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </div>

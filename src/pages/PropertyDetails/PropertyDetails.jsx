@@ -1,4 +1,5 @@
 import { Button, Checkbox, Input, Textarea } from "@material-tailwind/react";
+import { Helmet } from "react-helmet";
 import { FaRegHandPointRight } from "react-icons/fa";
 import { GrStatusUnknown } from "react-icons/gr";
 import { IoMdResize } from "react-icons/io";
@@ -25,7 +26,14 @@ const PropertyDetails = () => {
     image,
   } = singleDetail;
   return (
-    <div className="lg:max-w-[1200px] lg:mx-auto mx-5 py-14 space-y-10">
+    <div
+      className="lg:max-w-[1200px] lg:mx-auto mx-5 py-14 space-y-10"
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
+      <Helmet>
+        <title>Nestify Realty | {estate_title}</title>
+      </Helmet>
       <div className="flex justify-between">
         <div className="space-y-2">
           <h3 className="text-3xl">{estate_title}</h3>
